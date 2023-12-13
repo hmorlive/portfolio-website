@@ -13,6 +13,22 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    keyframes: {
+      slideLeft: {
+        '0%': { transform: 'translateX(100%)' },
+        '70%': { transform: 'translateX(-25%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+      slideTop: {
+        '0%': { transform: 'translateY(-100%)' },
+        '70%': { transform: 'translateY(25%)' },
+        '100%': { transform: 'translateY(100%)' },
+      },
+    },
+    animation: {
+      'slide-left': 'slideLeft 3s ease-in-out infinite',
+      'slide-top': 'slideTop 3s ease-in-out infinite',
+    },
   },
   plugins: [],
 }
