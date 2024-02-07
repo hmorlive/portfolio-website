@@ -26,7 +26,7 @@ export default function AboutSection() {
       <div className="container w-full mx-auto flex p-4 flex-col 2xl:flex-row justify-around flex-wrap gap-6">
         <div className="flex flex-col gap-2">
           <h2>About Me</h2>
-          <p>Hi, I'm Haz.</p>
+          <p>Hi, I&apos;m Haz.</p>
           <p>I like building stuff.</p>
           <div className="w-[200px] max-w-[90vw] text-xs gap-2 py-2 px-4 border">
             <span className="text-red-700 flex gap-2 items-center">
@@ -44,7 +44,6 @@ export default function AboutSection() {
           <p>Stuff that <b>makes my life easier</b>.</p>
           <p>Stuff that is <b>automated</b>.</p>
           <p>Stuff that is <b>peak-performing</b>.</p>
-          <p>Stuff that is <b>accessible.</b></p>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <h2>Experience</h2>
@@ -109,7 +108,6 @@ export default function AboutSection() {
           <div className="flex flex-col items-start justify-center gap-1">
             <span className="font-bold">
               MS Applied Computer Science{" "}
-              <span className="font-light">- 2022</span>
             </span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Frosburg State University</span>
@@ -118,7 +116,7 @@ export default function AboutSection() {
           </div>
           <div className="flex flex-col items-start justify-center gap-1">
             <span className="font-bold">
-              MBA <span className="font-light">- 2020</span>
+              MBA
             </span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Barry University</span>
@@ -127,7 +125,7 @@ export default function AboutSection() {
           </div>
           <div className="flex flex-col items-start justify-center gap-1">
             <span className="font-bold">
-              BAS Supervision & Management <span className="font-light">- 2018</span>
+              BAS Supervision & Management
             </span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Miami Dade College</span>
