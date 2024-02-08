@@ -11,5 +11,5 @@ h3 {
 }
 
 body {
-    @apply text-sm mb-2;
+    @apply text-sm;
 }
