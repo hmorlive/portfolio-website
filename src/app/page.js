@@ -2,8 +2,7 @@
 import { useState } from "react";
 import AboutSection from "./about/about";
 import RippleEffect from "./ripple";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPauseCircle, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import { FaPlayCircle, FaRegPauseCircle } from "react-icons/fa";
 
 export default function Home() {
   const [animate, setAnimate] = useState(true);
@@ -29,7 +28,7 @@ export default function Home() {
                   Software Engineer
                 </h2>
               </div>
-              <button onClick={toggleAnimation} className="fixed bottom-30 right-10 flex items-center gap-1 bg-zinc-950 p-2 z-2 text-zinc-400 hover:text-green-300 text-xs mix-blend-difference"><FontAwesomeIcon icon={animate ? faPauseCircle :faPlayCircle} title={animate ? 'Pause Animations' : 'Resume Animations'} /></button>
+              <button onClick={toggleAnimation} className="fixed bottom-30 right-10 flex items-center gap-1 bg-zinc-950 p-2 z-2 text-zinc-400 hover:text-green-300 text-xs mix-blend-difference">{animate ? <FaRegPauseCircle title="Pause Animation"/> : <FaPlayCircle title="Play Animation" />}</button>
             </div>
             <div className={`-ml-[10vw] ${animate ? "animate-slide-left" : null} w-full h-[2px] bg-gradient-to-r to-zin-950 from-zinc-900`}></div>
           </div>

@@ -1,23 +1,28 @@
 import {
-  faAngular,
-  faAws,
-  faCss3,
-  faGithub,
-  faHtml5,
-  faJava,
-  faNode,
-  faNodeJs,
-  faPhp,
-  faPython,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
+  FaAngular,
+  FaAws,
+  FaCheck,
+  FaCss3,
+  FaEnvelope,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaHtml5,
+  FaJs,
+  FaLinkedin,
+  FaLinux,
+  FaNodeJs,
+  FaPhp,
+  FaPython,
+  FaReact,
+  FaTimes,
+} from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
 import {
-  faCheck,
-  faEnvelope,
-  faExternalLink,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  SiAmazondynamodb,
+  SiMariadb,
+  SiMongodb,
+  SiMysql,
+} from "react-icons/si";
 import Link from "next/link";
 
 export default function AboutSection() {
@@ -27,23 +32,31 @@ export default function AboutSection() {
         <div className="flex flex-col gap-2">
           <h2>About Me</h2>
           <p>Hi, I&apos;m Haz.</p>
-          <p>I like building stuff.</p>
+          <p>I like building software.</p>
           <div className="w-[200px] max-w-[90vw] text-xs gap-2 py-2 px-4 border">
             <span className="text-red-700 flex gap-2 items-center">
-              <FontAwesomeIcon icon={faTimes} />
+              <FaTimes />
               <span className="text-zinc-600">Error at line 1.</span>
             </span>
           </div>
           <div className="w-[200px] max-w-[90vw] py-2 px-4 border">
             <span className="text-xs text-green-700 flex gap-2 items-center">
-              <FontAwesomeIcon icon={faCheck} />
+              <FaCheck />
               <span className="text-zinc-600">Build successful.</span>
             </span>
           </div>
-          <p>Stuff that <b>works</b>.</p>
-          <p>Stuff that <b>makes my life easier</b>.</p>
-          <p>Stuff that is <b>automated</b>.</p>
-          <p>Stuff that is <b>peak-performing</b>.</p>
+          <p>
+            Software that <b>works</b>.
+          </p>
+          <p>
+            Software that <b>makes life easier</b>.
+          </p>
+          <p>
+            Software that is <b>automated</b>.
+          </p>
+          <p>
+            Software that <b>performs</b>.
+          </p>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <h2>Experience</h2>
@@ -52,9 +65,14 @@ export default function AboutSection() {
               Founder & Lead Software Engineer{" "}
               <span className="font-light">- since 2019</span>
             </span>
-            <span>
-              <Link href={"https://fullsummit.us"} target="_blank" className="text-blue-600">
-                Full Summit <FontAwesomeIcon icon={faExternalLink} />{" "}
+            <span className="flex gap-1 text-sm">
+              <Link
+                href={"https://fullsummit.us"}
+                target="_blank"
+                className="text-blue-600 font-normal flex items-center justify-center gap-1"
+              >
+                Full Summit{" "}
+                <FaExternalLinkAlt className="text-xs text-gray-500" />
               </Link>
               <span className="font-light not-italic">
                 - Peak Performing Software
@@ -70,63 +88,57 @@ export default function AboutSection() {
           <div className="flex flex-col">
             <h3>Frontend</h3>
             <div className="flex gap-1 items-center">
-              <FontAwesomeIcon icon={faHtml5} className="text-black" />
-              <FontAwesomeIcon icon={faCss3} className="text-black" />
-              <FontAwesomeIcon icon={faReact} className="text-black" />
-              <FontAwesomeIcon icon={faAngular} className="text-black" />
-              <span>NextJS</span>
-              <span>VanillaJS</span>
+              <FaHtml5 />
+              <FaCss3 />
+              <FaReact />
+              <FaAngular />
+              <RiNextjsFill />
+              <FaJs />
             </div>
           </div>
           <div className="flex flex-col">
             <h3>Backend</h3>
             <div className="flex gap-2 items-center">
-            <FontAwesomeIcon icon={faNodeJs} className="text-black" />
-            <FontAwesomeIcon icon={faPhp} className="text-black" />
-            <FontAwesomeIcon icon={faPython} className="text-black" />
-            <FontAwesomeIcon icon={faJava} className="text-black" />
+              <FaNodeJs />
+              <FaPhp />
+              <FaPython />
             </div>
           </div>
           <div className="flex flex-col">
             <h3>Databases</h3>
             <div className="flex gap-2 items-center">
-              <span>DynamoDB</span>
-              <span>MongoDB</span>
-              <span>OracleSQL</span>
+              <SiAmazondynamodb />
+              <SiMongodb />
+              <SiMysql />
+              <SiMariadb />
             </div>
           </div>
           <div className="flex flex-col">
             <h3>Cloud</h3>
             <div className="flex gap-2 items-center">
-            <FontAwesomeIcon icon={faAws} className="text-black" />
-              <span>Linux Servers</span>
+              <FaAws />
+              <FaLinux />
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <h2>Education</h2>
           <div className="flex flex-col items-start justify-center gap-1">
-            <span className="font-bold">
-              MS Applied Computer Science{" "}
-            </span>
+            <span className="font-bold">MS Applied Computer Science </span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Frosburg State University</span>
               <span>Frostburg, MD</span>
             </div>
           </div>
           <div className="flex flex-col items-start justify-center gap-1">
-            <span className="font-bold">
-              MBA
-            </span>
+            <span className="font-bold">MBA</span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Barry University</span>
               <span>Miami Shores, FL</span>
             </div>
           </div>
           <div className="flex flex-col items-start justify-center gap-1">
-            <span className="font-bold">
-              BAS Supervision & Management
-            </span>
+            <span className="font-bold">BAS Supervision & Management</span>
             <div className="gap-0 flex flex-col">
               <span className="italic">Miami Dade College</span>
               <span>Miami, FL</span>
@@ -136,12 +148,8 @@ export default function AboutSection() {
         <div className="flex flex-col gap-2 text-sm">
           <h2>Contact</h2>
           <div className="flex gap-2 items-center">
-            <FontAwesomeIcon icon={faEnvelope} className="text-black" />
+            <FaEnvelope />
             <span>mail@hazmedmoreno.com</span>
-          </div>
-          <div className="flex gap-2 items-center">
-            <FontAwesomeIcon icon={faEnvelope} className="text-black" />
-            <span>hmor@fullsummit.us</span>
           </div>
           <Link
             href={"https://github.com/hmorlive"}
@@ -149,12 +157,19 @@ export default function AboutSection() {
             aria-label="Go to Github Profile"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faGithub} className="text-black" />
+            <FaGithub />
             @hmorlive
-            <FontAwesomeIcon
-              icon={faExternalLink}
-              className="text-blue-600 text-sm"
-            />
+            <FaExternalLinkAlt className="text-xs text-gray-500" />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/hazmed"}
+            className=" flex gap-2 items-center"
+            aria-label="Go to LinkedIn Profile"
+            target="_blank"
+          >
+            <FaLinkedin />
+            @hazmed
+            <FaExternalLinkAlt className="text-xs text-gray-500" />
           </Link>
         </div>
       </div>
