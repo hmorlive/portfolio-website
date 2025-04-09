@@ -29,14 +29,17 @@ export default function Resume() {
         ref={resumeRef}
       >
         <h1 className="text-xl font-light text-black">Hazmed Moreno</h1>
-        <h2 className="text-sm font-normal text-blue-600">Technical Analyst | Software Engineer | HIPAA-Aware Healthcare Experience</h2>
+        <h2 className="text-sm font-normal text-blue-600">
+          Technical Analyst | Software Engineer | HIPAA-Aware Healthcare
+          Experience
+        </h2>
         <ContactSection />
         <SummarySection />
+        <SkillsSection />
         <p className="text-xs flex items-center gap-1">
           <FaLanguage className="text-lg" />
-          Bilingual: English / Spanish
+          <strong>Bilingual</strong>: English / Spanish
         </p>
-        <SkillsSection />
         <ExperienceSection />
         <EducationSection />
         <ProjectsSection />
@@ -53,9 +56,9 @@ const SummarySection = () => {
         Technical professional with a background in software development and
         hands-on experience in HIPAA-compliant healthcare environments. Skilled
         in gathering requirements, analyzing workflows, and delivering
-        user-focused systems. Seeking to transition into a Business Analyst role
-        where I can bridge the gap between users and technology—especially in
-        healthcare and data-sensitive industries.
+        user-focused systems. Now pursuing a Business Analyst role where I can
+        bridge the gap between users and technology—especially in healthcare and
+        data-sensitive industries.
       </p>
     </section>
   );
@@ -63,7 +66,7 @@ const SummarySection = () => {
 
 const ContactSection = () => {
   return (
-    <section className="flex flex-col gap-1 mt-2">
+    <section className="flex flex-col gap-1 mt-1">
       <div className="flex flex-col sm:flex-row gap-4 text-sm">
         <Link
           href="mailto:mail@hazmedmoreno.com"
@@ -113,13 +116,15 @@ const SkillsSection = () => {
           <strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, PHP
         </li>
         <li>
-          <strong>Frontend:</strong> React, Next.js, AngularJS, HTML, CSS, TailwindCSS
+          <strong>Frontend:</strong> React, Next.js, AngularJS, HTML, CSS,
+          TailwindCSS
         </li>
         <li>
           <strong>Backend:</strong> Node.js, Express, Electron
         </li>
         <li>
-          <strong>Cloud & DevOps:</strong> AWS (Lambda, S3, RDS, DynamoDB, etc.), CloudFormation, CDK, Nginx
+          <strong>Cloud & DevOps:</strong> AWS (Lambda, S3, RDS, DynamoDB,
+          etc.), CloudFormation, CDK, Nginx
         </li>
         <li>
           <strong>Databases:</strong> MongoDB, PostgreSQL, MySQL, DynamoDB
@@ -131,7 +136,8 @@ const SkillsSection = () => {
           <strong>Tools:</strong> Jira, Tableau, Draw.io, Markdown
         </li>
         <li>
-          <strong>Other:</strong> Responsive Design, Accessible UI, Security Best Practices
+          <strong>Other:</strong> Responsive Design, Accessible UI, Security
+          Best Practices
         </li>
       </ul>
     </section>
@@ -149,13 +155,15 @@ const ExperienceSection = () => {
           </h4>
           <p className="text-xs font-light">
             <span className="text-blue-600 font-semibold">Full Summit LLC</span>{" "}
-            - Miami, FL
-            <span className="text-xs font-light">
-              {" "}
-              {"  |  "} April 2019 - Present
-            </span>
+            – Miami, FL
+            <span className="text-xs font-light"> | April 2019 – Present</span>
           </p>
           <ul className="list-disc list-inside text-xs">
+            <li>
+              <strong>Requirements & Analysis:</strong> Collaborated with
+              clients to gather requirements, document workflows, and translate
+              business needs into functional specifications.
+            </li>
             <li>
               <strong>Full-Stack Development & Architecture:</strong> Designed
               and built end-to-end applications for clients, enhancing business
