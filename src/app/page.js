@@ -1,39 +1,92 @@
 "use client";
+
 import { useState } from "react";
+import Link from "next/link";
 import AboutSection from "./about/about";
 import RippleEffect from "./ripple";
-import { FaPlayCircle, FaRegPauseCircle } from "react-icons/fa";
+import { FaPlayCircle, FaRegPauseCircle, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   const [animate, setAnimate] = useState(true);
 
-  const toggleAnimation = () => {
-    setAnimate(!animate);
-  };
   return (
     <>
       <RippleEffect animate={animate} />
-      <main className="flex flex-col w-full relative z-0 overflow-hidden">
-        <section className="p-4 relative w-full mx-auto container min-h-screen items-start justify-center flex flex-col overflow-hidden">
-          <div className="p-4 w-full mx-auto container h-[70vh] items-start justify-end flex flex-col overflow-hidden">
-            <div className={`-mb-[10vh] ${animate ? "animate-slide-top" : null} h-full w-[2px] bg-gradient-to-b from-zinc-950 to-zinc-900`}></div>
-            <div className="p-4 flex flex-wrap gap-4 items-end justify-between w-full">
-              <div className="flex flex-col">
-                <h1
-                  className={`font-semibold text-4xl bg-clip-text text-transparent bg-gradient-to-r to-zinc-600 from-zinc-500 pb-1`}
+
+      <main className="relative w-full overflow-hidden">
+        <div className="relative z-10">
+          {/* ── Hero ── */}
+          <section className="container mx-auto flex min-h-screen flex-col justify-center px-4 py-16">
+            <div className="relative max-w-3xl">
+              {/* Decorative line */}
+              <div
+                className={[
+                  "pointer-events-none absolute -left-6 top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-blue-600/40 via-blue-600/10 to-transparent",
+                  animate ? "animate-slide-top" : "",
+                ].join(" ")}
+                aria-hidden="true"
+              />
+
+              <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-900">
+                Hazmed Moreno
+              </h1>
+
+              <h2 className="mt-2 text-xl sm:text-2xl font-light text-blue-600">
+                Software Engineer
+              </h2>
+
+              {/* Accent rule */}
+              <div className="mt-6 h-px w-12 bg-blue-600" aria-hidden="true" />
+
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600">
+                Full-stack engineer building production web and desktop systems
+                with TypeScript, React/Next.js, and AWS serverless.
+              </p>
+
+              <p className="mt-2 text-sm text-zinc-400">
+                Production desktop system in use since 2023 · 5,000+ orders
+                processed.
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link href="/resume" className="btn-primary">
+                  View Resume
+                </Link>
+
+                <Link href="mailto:mail@hazmedmoreno.com" className="btn-secondary">
+                  <FaEnvelope className="text-blue-600" /> Email
+                </Link>
+
+                <Link
+                  href="https://github.com/hmorlive"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
                 >
-                  Hazmed Moreno
-                </h1>
-                <h2 className="text-xl font-light text-zinc-400">
-                  Software Engineer
-                </h2>
+                  <FaGithub className="text-blue-600" /> GitHub
+                </Link>
               </div>
-              <button onClick={toggleAnimation} className="fixed bottom-30 right-10 flex items-center gap-1 bg-zinc-950 p-2 z-2 text-zinc-400 hover:text-green-300 text-xs mix-blend-difference">{animate ? <FaRegPauseCircle title="Pause Animation"/> : <FaPlayCircle title="Play Animation" />}</button>
             </div>
-            <div className={`-ml-[10vw] ${animate ? "animate-slide-left" : null} w-full h-[2px] bg-gradient-to-r to-zin-950 from-zinc-900`}></div>
-          </div>
-        </section>
-        <AboutSection />
+
+            {/* Animation toggle */}
+            <button
+              type="button"
+              onClick={() => setAnimate((v) => !v)}
+              aria-label={animate ? "Pause background animation" : "Play background animation"}
+              className="fixed bottom-6 right-6 z-50 rounded-full p-2 text-zinc-300
+                         hover:text-blue-600 transition-colors
+                         focus:outline-none focus:ring-2 focus:ring-blue-200"
+            >
+              {animate ? (
+                <FaRegPauseCircle className="text-lg" title="Pause animation" />
+              ) : (
+                <FaPlayCircle className="text-lg" title="Play animation" />
+              )}
+            </button>
+          </section>
+
+          <AboutSection />
+        </div>
       </main>
     </>
   );
