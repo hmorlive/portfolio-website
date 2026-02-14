@@ -55,8 +55,6 @@ export default function Resume() {
         <ExperienceSection />
         <EducationSection />
         <ProjectsSection />
-        <LanguagesSection />
-        <ReferenceSection />
       </div>
     </div>
   );
